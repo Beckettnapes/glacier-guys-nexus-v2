@@ -1,0 +1,65 @@
+{
+  "name": "Assignment",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "category": {
+      "type": "string",
+      "title": "Category",
+      "enum": [
+        "Research",
+        "Outreach",
+        "Fundraising",
+        "Field Work",
+        "Education",
+        "Advocacy"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "title": "Priority",
+      "enum": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "Not Started",
+        "In Progress",
+        "Completed"
+      ]
+    },
+    "due_date": {
+      "type": "string",
+      "title": "Due Date",
+      "format": "date"
+    },
+    "assigned_to": {
+      "type": "string",
+      "title": "Assigned To"
+    },
+    "progress": {
+      "type": "number",
+      "title": "Progress (%)",
+      "minimum": 0,
+      "maximum": 100
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "status"
+  ]
+}

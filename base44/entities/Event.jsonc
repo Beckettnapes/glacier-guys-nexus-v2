@@ -1,0 +1,43 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "date": {
+      "type": "string",
+      "title": "Date",
+      "format": "date"
+    },
+    "time": {
+      "type": "string",
+      "title": "Time"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "location": {
+      "type": "string",
+      "title": "Location"
+    },
+    "type": {
+      "type": "string",
+      "title": "Type",
+      "enum": [
+        "Meeting",
+        "Expedition",
+        "Fundraiser",
+        "Training",
+        "Outreach",
+        "Other"
+      ]
+    }
+  },
+  "required": [
+    "title",
+    "date"
+  ]
+}

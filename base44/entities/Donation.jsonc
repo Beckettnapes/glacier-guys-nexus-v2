@@ -1,0 +1,48 @@
+{
+  "name": "Donation",
+  "type": "object",
+  "properties": {
+    "donor_name": {
+      "type": "string",
+      "title": "Donor Name"
+    },
+    "amount": {
+      "type": "number",
+      "title": "Amount ($)"
+    },
+    "category": {
+      "type": "string",
+      "title": "Category",
+      "enum": [
+        "Gear & Equipment",
+        "Research Funding",
+        "Transport & Logistics",
+        "Education Programs",
+        "Conservation Projects",
+        "Emergency Relief"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "title": "Date",
+      "format": "date"
+    },
+    "message": {
+      "type": "string",
+      "title": "Message"
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "title": "Anonymous"
+    },
+    "donation_url": {
+      "type": "string",
+      "title": "Donation Link"
+    }
+  },
+  "required": [
+    "amount",
+    "category",
+    "date"
+  ]
+}

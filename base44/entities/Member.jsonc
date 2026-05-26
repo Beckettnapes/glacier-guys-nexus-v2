@@ -1,0 +1,72 @@
+{
+  "name": "Member",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "role": {
+      "type": "string",
+      "title": "Position/Title"
+    },
+    "group": {
+      "type": "string",
+      "title": "Category (for filtering)",
+      "enum": [
+        "Leader",
+        "Co-Leader",
+        "Member"
+      ]
+    },
+    "bio": {
+      "type": "string",
+      "title": "Bio"
+    },
+    "avatar_url": {
+      "type": "string",
+      "title": "Avatar URL"
+    },
+    "location": {
+      "type": "string",
+      "title": "Location"
+    },
+    "specialties": {
+      "type": "array",
+      "title": "Skills",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preferred_times": {
+      "type": "array",
+      "title": "Preferred Times",
+      "items": {
+        "type": "string"
+      }
+    },
+    "joined_date": {
+      "type": "string",
+      "title": "Joined Date",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "Active",
+        "On Expedition",
+        "Inactive",
+        "Pending"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    }
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}
