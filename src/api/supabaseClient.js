@@ -39,8 +39,6 @@ function makeEntity(tableName) {
       const { data, error } = await supabase
         .from(tableName)
         .insert([payload])
-        .select()
-        .single();
       if (error) throw error;
       return data;
     },
