@@ -1,11 +1,9 @@
-```javascriptreact
 import { motion } from "framer-motion";
-import { MapPin, Mail } from "lucide-react";
 
 const statusColors = {
-  "Active": "bg-emerald-500",
+  Active: "bg-emerald-500",
   "On Expedition": "bg-primary",
-  "Inactive": "bg-muted-foreground",
+  Inactive: "bg-muted-foreground",
 };
 
 export default function MemberCard({ member, index }) {
@@ -18,7 +16,6 @@ export default function MemberCard({ member, index }) {
     >
       <div className="p-6">
         <div className="flex items-start gap-4">
-          {/* Avatar */}
           <div className="relative flex-shrink-0">
             <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
               {member.avatar_url ? (
@@ -31,31 +28,16 @@ export default function MemberCard({ member, index }) {
             </div>
             <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-card ${statusColors[member.status] || "bg-muted-foreground"}`} />
           </div>
-
-          {/* Info */}
           <div className="min-w-0 flex-1">
             <h3 className="text-foreground font-semibold text-base truncate">{member.name}</h3>
             <p className="text-primary text-xs font-medium tracking-wide uppercase mt-0.5">
               {member.role}
             </p>
+            <p className="text-muted-foreground text-xs mt-0.5">
+              {member.group}
+            </p>
           </div>
         </div>
-
-        <div className="flex items-center gap-4 mt-4 text-xs text-muted-foreground">
-          {member.location && (
-            <span className="flex items-center gap-1">
-              <MapPin className="w-3 h-3" />
-              {member.location}
-            </span>
-          )}
-          {member.email && (
-            <a href={`mailto:${member.email}`} className="flex items-center gap-1 hover:text-primary transition-colors truncate">
-              <Mail className="w-3 h-3 flex-shrink-0" />
-              {member.email}
-            </a>
-          )}
-        </div>
-
         {member.specialties?.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mt-4">
             {member.specialties.map((s) => (
@@ -69,4 +51,3 @@ export default function MemberCard({ member, index }) {
     </motion.div>
   );
 }
-```
