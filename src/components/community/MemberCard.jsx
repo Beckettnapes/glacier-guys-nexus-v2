@@ -1,3 +1,4 @@
+```javascriptreact
 import { motion } from "framer-motion";
 import { MapPin, Mail } from "lucide-react";
 
@@ -68,3 +69,4 @@ export default function MemberCard({ member, index }) {
     </motion.div>
   );
 }
+```
